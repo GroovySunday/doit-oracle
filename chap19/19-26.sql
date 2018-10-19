@@ -1,0 +1,1 @@
+DESC pkg_example;

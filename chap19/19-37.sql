@@ -1,0 +1,3 @@
+INSERT INTO EMP_TRG
+VALUES(9999, 'TestEmp', 'CLERK', 7788,
+       TO_DATE('2018-03-03', 'YYYY-MM-DD'), 1200, null, 20);

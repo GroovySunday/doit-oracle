@@ -1,4 +1,6 @@
--- 연습 7-1
+-- 잊기 전에 한 번 더 정답
+
+-- 7-1
 SELECT DEPTNO,
        TRUNC(AVG(SAL)) AS AVG_SAL,
        MAX(SAL) AS MAX_SAL,
@@ -7,27 +9,27 @@ SELECT DEPTNO,
   FROM EMP
 GROUP BY DEPTNO; 
 
--- 연습 7-2
+-- 7-2
 SELECT JOB,
        COUNT(*)
   FROM EMP
 GROUP BY JOB
 HAVING COUNT(*) >= 3; 
 
--- 연습 7-3
+-- 7-3
 SELECT TO_CHAR(HIREDATE, 'YYYY') AS HIRE_YEAR,
        DEPTNO,
        COUNT(*) AS CNT
   FROM EMP
 GROUP BY TO_CHAR(HIREDATE, 'YYYY'), DEPTNO; 
 
--- 연습 7-4
+-- 7-4
 SELECT NVL2(COMM, 'O', 'X') AS EXIST_COMM,
        COUNT(*) AS CNT
   FROM EMP
 GROUP BY NVL2(COMM, 'O', 'X'); 
 
--- 연습 7-5
+-- 7-5
 SELECT DEPTNO,
        TO_CHAR(HIREDATE, 'YYYY') AS HIRE_YEAR,
        COUNT(*) AS CNT,

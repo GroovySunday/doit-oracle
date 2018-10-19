@@ -1,8 +1,10 @@
--- 연습 4-2
+-- 잊기 전에 한 번 더 정답
+
+-- 4-2
 SELECT DISTINCT JOB
   FROM EMP;
 
--- 연습 4-3
+-- 4-3
 SELECT EMPNO AS EMPLOYEE_NO,
        ENAME AS EMPLOYEE_NAME,
        JOB,

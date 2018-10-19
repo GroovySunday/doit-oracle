@@ -1,4 +1,6 @@
--- 연습 13-1
+-- 잊기 전에 한 번 더 정답
+
+-- 13-1
 --① 
 CREATE TABLE EMPIDX
  AS SELECT * 
@@ -13,14 +15,14 @@ SELECT *
   FROM USER_INDEXES 
  WHERE INDEX_NAME = 'IDX_EMPIDX_EMPNO';
 
--- 연습 13-2
+-- 13-2
 CREATE OR REPLACE VIEW EMPIDX_OVER15K 
     AS (SELECT EMPNO, ENAME, JOB, DEPTNO, 
                SAL, NVL2(COMM, 'O', 'X') AS COMM 
           FROM EMPIDX 
          WHERE SAL > 1500); 
 
--- 연습 13-3
+-- 13-3
 --①
 CREATE TABLE DEPTSEQ
     AS SELECT * 

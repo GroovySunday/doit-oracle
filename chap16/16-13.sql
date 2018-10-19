@@ -1,0 +1,10 @@
+DECLARE
+   V_NUMBER NUMBER := 14;
+BEGIN
+   IF MOD(V_NUMBER, 2) = 1 THEN
+      DBMS_OUTPUT.PUT_LINE('V_NUMBER는 홀수입니다!');
+   ELSE
+      DBMS_OUTPUT.PUT_LINE('V_NUMBER는 짝수입니다!');
+   END IF;
+END;
+/

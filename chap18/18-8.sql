@@ -1,0 +1,8 @@
+DECLARE
+   v_wrong NUMBER;
+BEGIN
+   SELECT DNAME INTO v_wrong
+     FROM DEPT
+    WHERE DEPTNO = 10;
+END;
+/

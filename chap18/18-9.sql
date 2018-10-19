@@ -1,0 +1,11 @@
+DECLARE
+   v_wrong NUMBER;
+BEGIN
+   SELECT DNAME INTO v_wrong
+     FROM DEPT
+    WHERE DEPTNO = 10;
+EXCEPTION
+   WHEN VALUE_ERROR THEN
+      DBMS_OUTPUT.PUT_LINE('예외 처리 : 수치 또는 값 오류 발생');
+END;
+/

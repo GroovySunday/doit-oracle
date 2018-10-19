@@ -1,4 +1,6 @@
--- 연습 14-1
+-- 잊기 전에 한 번 더 정답
+
+-- 14-1
 --① 
 CREATE TABLE DEPT_CONST ( 
    DEPTNO NUMBER(2)    CONSTRAINT DEPTCONST_DEPTNO_PK PRIMARY KEY, 
