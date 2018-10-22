@@ -1,25 +1,25 @@
 DECLARE
-   -- д©╪╜ ╣╔юлем╦╕ ют╥бгр ╨╞╪Ж ╪╠╬П
+   -- Л╩╓Л└° К█╟Л²╢М└╟К╔╪ Л·┘К═╔М∙═ КЁ─Л┬≤ Л└═Л√╦
    V_DEPT_ROW DEPT%ROWTYPE;
 
-   -- ╦М╫цюШ д©╪╜ ╪╠╬П(Declaration)
+   -- К╙┘Л▀°Л═│ Л╩╓Л└° Л└═Л√╦(Declaration)
    CURSOR c1 IS
       SELECT DEPTNO, DNAME, LOC
         FROM DEPT
        WHERE DEPTNO = 40;
 
 BEGIN
-   -- д©╪╜ ©╜╠Б(Open)
+   -- Л╩╓Л└° Л≈╢Й╦╟(Open)
    OPEN c1;
 
-   -- д©╪╜╥н╨нем юп╬Н©б ╣╔юлем ╩Г©К(Fetch)
+   -- Л╩╓Л└°К║°К╤─М└╟ Л²╫Л√╢Л≤╗ К█╟Л²╢М└╟ Л┌╛Л ╘(Fetch)
    FETCH c1 INTO V_DEPT_ROW;
 
    DBMS_OUTPUT.PUT_LINE('DEPTNO : ' || V_DEPT_ROW.DEPTNO);
    DBMS_OUTPUT.PUT_LINE('DNAME : ' || V_DEPT_ROW.DNAME);
    DBMS_OUTPUT.PUT_LINE('LOC : ' || V_DEPT_ROW.LOC);
 
-   -- д©╪╜ ╢щ╠Б(Close)
+   -- Л╩╓Л└° К▀╚Й╦╟(Close)
    CLOSE c1;
 
 END;

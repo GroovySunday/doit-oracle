@@ -1,7 +1,7 @@
 CREATE TABLE EMP_TRG_LOG(
-   TABLENAME VARCHAR2(10), -- DMLÀÌ ¼öÇàµÈ Å×ÀÌºí ÀÌ¸§
-   DML_TYPE VARCHAR2(10),  -- DML ¸í·É¾îÀÇ Á¾·ù
-   EMPNO NUMBER(4),        -- DML ´ë»óÀÌ µÈ »ç¿ø ¹øÈ£
-   USER_NAME VARCHAR2(30), -- DMLÀ» ¼öÇàÇÑ USER ÀÌ¸§
-   CHANGE_DATE DATE        -- DMLÀÌ ¼öÇàµÈ ³¯Â¥
+   TABLENAME VARCHAR2(10), -- DMLì´ ìˆ˜í–‰ëœ í…Œì´ë¸” ì´ë¦„
+   DML_TYPE VARCHAR2(10),  -- DML ëª…ë ¹ì–´ì˜ ì¢…ë¥˜
+   EMPNO NUMBER(4),        -- DML ëŒ€ìƒì´ ëœ ì‚¬ì› ë²ˆí˜¸
+   USER_NAME VARCHAR2(30), -- DMLì„ ìˆ˜í–‰í•œ USER ì´ë¦„
+   CHANGE_DATE DATE        -- DMLì´ ìˆ˜í–‰ëœ ë‚ ì§œ
 );

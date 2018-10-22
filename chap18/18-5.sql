@@ -1,28 +1,28 @@
 DECLARE
-   -- Ä¿¼­ µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÒ º¯¼ö ¼±¾ð
+   -- ì»¤ì„œ ë°ì´í„°ë¥¼ ìž…ë ¥í•  ë³€ìˆ˜ ì„ ì–¸
    V_DEPT_ROW DEPT%ROWTYPE;
-   -- ¸í½ÃÀû Ä¿¼­ ¼±¾ð(Declaration)
+   -- ëª…ì‹œì  ì»¤ì„œ ì„ ì–¸(Declaration)
    CURSOR c1 (p_deptno DEPT.DEPTNO%TYPE) IS
       SELECT DEPTNO, DNAME, LOC
         FROM DEPT
        WHERE DEPTNO = p_deptno;
 BEGIN
-   -- 10¹ø ºÎ¼­ Ã³¸®¸¦ À§ÇØ Ä¿¼­ »ç¿ë
+   -- 10ë²ˆ ë¶€ì„œ ì²˜ë¦¬ë¥¼ ìœ„í•´ ì»¤ì„œ ì‚¬ìš©
    OPEN c1 (10);
       LOOP
          FETCH c1 INTO V_DEPT_ROW;
          EXIT WHEN c1%NOTFOUND;
-         DBMS_OUTPUT.PUT_LINE('10¹ø ºÎ¼­ - DEPTNO : ' || V_DEPT_ROW.DEPTNO
+         DBMS_OUTPUT.PUT_LINE('10ë²ˆ ë¶€ì„œ - DEPTNO : ' || V_DEPT_ROW.DEPTNO
                                      || ', DNAME : ' || V_DEPT_ROW.DNAME
                                      || ', LOC : ' || V_DEPT_ROW.LOC);
       END LOOP;
    CLOSE c1;
-   -- 20¹ø ºÎ¼­ Ã³¸®¸¦ À§ÇØ Ä¿¼­ »ç¿ë
+   -- 20ë²ˆ ë¶€ì„œ ì²˜ë¦¬ë¥¼ ìœ„í•´ ì»¤ì„œ ì‚¬ìš©
    OPEN c1 (20);
       LOOP
          FETCH c1 INTO V_DEPT_ROW;
          EXIT WHEN c1%NOTFOUND;
-         DBMS_OUTPUT.PUT_LINE('20¹ø ºÎ¼­ - DEPTNO : ' || V_DEPT_ROW.DEPTNO
+         DBMS_OUTPUT.PUT_LINE('20ë²ˆ ë¶€ì„œ - DEPTNO : ' || V_DEPT_ROW.DEPTNO
                                      || ', DNAME : ' || V_DEPT_ROW.DNAME
                                      || ', LOC : ' || V_DEPT_ROW.LOC);
       END LOOP;

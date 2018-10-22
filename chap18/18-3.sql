@@ -1,21 +1,21 @@
 DECLARE
-   -- Ä¿¼­ µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÒ º¯¼ö ¼±¾ð
+   -- ì»¤ì„œ ë°ì´í„°ë¥¼ ìž…ë ¥í•  ë³€ìˆ˜ ì„ ì–¸
    V_DEPT_ROW DEPT%ROWTYPE;
 
-   -- ¸í½ÃÀû Ä¿¼­ ¼±¾ð(Declaration)
+   -- ëª…ì‹œì  ì»¤ì„œ ì„ ì–¸(Declaration)
    CURSOR c1 IS
       SELECT DEPTNO, DNAME, LOC
         FROM DEPT;
 
 BEGIN
-   -- Ä¿¼­ ¿­±â(Open)
+   -- ì»¤ì„œ ì—´ê¸°(Open)
    OPEN c1;
 
    LOOP
-      -- Ä¿¼­·ÎºÎÅÍ ÀÐ¾î¿Â µ¥ÀÌÅÍ »ç¿ë(Fetch)
+      -- ì»¤ì„œë¡œë¶€í„° ì½ì–´ì˜¨ ë°ì´í„° ì‚¬ìš©(Fetch)
       FETCH c1 INTO V_DEPT_ROW;
 
-      -- Ä¿¼­ÀÇ ¸ðµç ÇàÀ» ÀÐ¾î¿À±â À§ÇØ %NOTFOUND ¼Ó¼º ÁöÁ¤
+      -- ì»¤ì„œì˜ ëª¨ë“  í–‰ì„ ì½ì–´ì˜¤ê¸° ìœ„í•´ %NOTFOUND ì†ì„± ì§€ì •
       EXIT WHEN c1%NOTFOUND;
 
       DBMS_OUTPUT.PUT_LINE('DEPTNO : ' || V_DEPT_ROW.DEPTNO
@@ -23,7 +23,7 @@ BEGIN
                         || ', LOC : ' || V_DEPT_ROW.LOC);
    END LOOP;
 
-   -- Ä¿¼­ ´Ý±â(Close)
+   -- ì»¤ì„œ ë‹«ê¸°(Close)
    CLOSE c1;
 
 END;

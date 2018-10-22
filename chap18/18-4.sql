@@ -1,11 +1,11 @@
 DECLARE
-   -- Έν½Γΐϋ ΔΏΌ­ Ό±Ύπ(Declaration)
+   -- λª…μ‹μ  μ»¤μ„ μ„ μ–Έ(Declaration)
    CURSOR c1 IS
    SELECT DEPTNO, DNAME, LOC
      FROM DEPT;
 
 BEGIN
-   -- ΔΏΌ­ FOR LOOP ½ΓΐΫ (ΐΪµΏ Open, Fetch, Close)
+   -- μ»¤μ„ FOR LOOP μ‹μ‘ (μλ™ Open, Fetch, Close)
    FOR c1_rec IN c1 LOOP
       DBMS_OUTPUT.PUT_LINE('DEPTNO : ' || c1_rec.DEPTNO
                       || ', DNAME : ' || c1_rec.DNAME

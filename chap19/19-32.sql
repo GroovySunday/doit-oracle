@@ -2,15 +2,15 @@ CREATE OR REPLACE TRIGGER trg_emp_nodml_weekend
 BEFORE
 INSERT OR UPDATE OR DELETE ON EMP_TRG
 BEGIN
-   IF TO_CHAR(sysdate, 'DY') IN ('Åä', 'ÀÏ') THEN
+   IF TO_CHAR(sysdate, 'DY') IN ('í† ', 'ì¼') THEN
       IF INSERTING THEN
-         raise_application_error(-20000, 'ÁÖ¸» »ç¿øÁ¤º¸ Ãß°¡ ºÒ°¡');
+         raise_application_error(-20000, 'ì£¼ë§ ì‚¬ì›ì •ë³´ ì¶”ê°€ ë¶ˆê°€');
       ELSIF UPDATING THEN
-         raise_application_error(-20001, 'ÁÖ¸» »ç¿øÁ¤º¸ ¼öÁ¤ ºÒ°¡');
+         raise_application_error(-20001, 'ì£¼ë§ ì‚¬ì›ì •ë³´ ìˆ˜ì • ë¶ˆê°€');
       ELSIF DELETING THEN
-         raise_application_error(-20002, 'ÁÖ¸» »ç¿øÁ¤º¸ »èÁ¦ ºÒ°¡');
+         raise_application_error(-20002, 'ì£¼ë§ ì‚¬ì›ì •ë³´ ì‚­ì œ ë¶ˆê°€');
       ELSE
-         raise_application_error(-20003, 'ÁÖ¸» »ç¿øÁ¤º¸ º¯°æ ºÒ°¡');
+         raise_application_error(-20003, 'ì£¼ë§ ì‚¬ì›ì •ë³´ ë³€ê²½ ë¶ˆê°€');
       END IF;
    END IF;
 END;

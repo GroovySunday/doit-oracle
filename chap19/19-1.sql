@@ -1,4 +1,4 @@
--- ÀØ±â Àü¿¡ ÇÑ ¹ø ´õ Á¤´ä
+-- ìžŠê¸° ì „ì— í•œ ë²ˆ ë” ì •ë‹µ
 CREATE OR REPLACE PROCEDURE pro_noparam
 IS
    V_EMPNO NUMBER(4) := 7788;

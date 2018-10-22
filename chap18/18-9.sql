@@ -6,6 +6,6 @@ BEGIN
     WHERE DEPTNO = 10;
 EXCEPTION
    WHEN VALUE_ERROR THEN
-      DBMS_OUTPUT.PUT_LINE('¿¹¿Ü Ã³¸® : ¼öÄ¡ ¶Ç´Â °ª ¿À·ù ¹ß»ý');
+      DBMS_OUTPUT.PUT_LINE('ì˜ˆì™¸ ì²˜ë¦¬ : ìˆ˜ì¹˜ ë˜ëŠ” ê°’ ì˜¤ë¥˜ ë°œìƒ');
 END;
 /

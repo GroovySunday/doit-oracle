@@ -5,10 +5,10 @@ BEGIN
      FROM DEPT
     WHERE DEPTNO = 10;
 
-   DBMS_OUTPUT.PUT_LINE('¿¹¿Ü°¡ ¹ß»ýÇÏ¸é ´ÙÀ½ ¹®ÀåÀº ½ÇÇàµÇÁö ¾Ê½À´Ï´Ù');
+   DBMS_OUTPUT.PUT_LINE('ì˜ˆì™¸ê°€ ë°œìƒí•˜ë©´ ë‹¤ìŒ ë¬¸ìž¥ì€ ì‹¤í–‰ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤');
 
 EXCEPTION
    WHEN VALUE_ERROR THEN
-      DBMS_OUTPUT.PUT_LINE('¿¹¿Ü Ã³¸® : ¼öÄ¡ ¶Ç´Â °ª ¿À·ù ¹ß»ý');
+      DBMS_OUTPUT.PUT_LINE('ì˜ˆì™¸ ì²˜ë¦¬ : ìˆ˜ì¹˜ ë˜ëŠ” ê°’ ì˜¤ë¥˜ ë°œìƒ');
 END;
 /

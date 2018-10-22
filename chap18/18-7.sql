@@ -2,18 +2,18 @@ BEGIN
    UPDATE DEPT SET DNAME='DATABASE'
     WHERE DEPTNO = 50;
 
-   DBMS_OUTPUT.PUT_LINE('°»½ÅµÈ ÇàÀÇ ¼ö : ' || SQL%ROWCOUNT);
+   DBMS_OUTPUT.PUT_LINE('ê°±ì‹ ëœ í–‰ì˜ ìˆ˜ : ' || SQL%ROWCOUNT);
 
    IF (SQL%FOUND) THEN
-      DBMS_OUTPUT.PUT_LINE('°»½Å ´ë»ó Çà Á¸Àç ¿©ºÎ : true');
+      DBMS_OUTPUT.PUT_LINE('ê°±ì‹  ëŒ€ìƒ í–‰ ì¡´ìž¬ ì—¬ë¶€ : true');
    ELSE
-      DBMS_OUTPUT.PUT_LINE('°»½Å ´ë»ó Çà Á¸Àç ¿©ºÎ : false');
+      DBMS_OUTPUT.PUT_LINE('ê°±ì‹  ëŒ€ìƒ í–‰ ì¡´ìž¬ ì—¬ë¶€ : false');
    END IF;
 
    IF (SQL%ISOPEN) THEN
-      DBMS_OUTPUT.PUT_LINE('Ä¿¼­ÀÇ OPEN ¿©ºÎ : true');
+      DBMS_OUTPUT.PUT_LINE('ì»¤ì„œì˜ OPEN ì—¬ë¶€ : true');
    ELSE
-      DBMS_OUTPUT.PUT_LINE('Ä¿¼­ÀÇ OPEN ¿©ºÎ : false');
+      DBMS_OUTPUT.PUT_LINE('ì»¤ì„œì˜ OPEN ì—¬ë¶€ : false');
    END IF;
 
 END;

@@ -1,6 +1,6 @@
 BEGIN
    FOR i IN REVERSE 0..4 LOOP
-      DBMS_OUTPUT.PUT_LINE('ÇöÀç iÀÇ °ª : ' || i);
+      DBMS_OUTPUT.PUT_LINE('í˜„ìž¬ iì˜ ê°’ : ' || i);
       END LOOP;
 END;
 /

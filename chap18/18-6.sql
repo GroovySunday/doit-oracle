@@ -1,15 +1,15 @@
 DECLARE
-   -- »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ºÎ¼­ ¹øÈ£¸¦ ÀúÀåÇÏ´Â º¯¼ö¼±¾ð
+   -- ì‚¬ìš©ìžê°€ ìž…ë ¥í•œ ë¶€ì„œ ë²ˆí˜¸ë¥¼ ì €ìž¥í•˜ëŠ” ë³€ìˆ˜ì„ ì–¸
    v_deptno DEPT.DEPTNO%TYPE;
-   -- ¸í½ÃÀû Ä¿¼­ ¼±¾ð(Declaration)
+   -- ëª…ì‹œì  ì»¤ì„œ ì„ ì–¸(Declaration)
    CURSOR c1 (p_deptno DEPT.DEPTNO%TYPE) IS
       SELECT DEPTNO, DNAME, LOC
         FROM DEPT
        WHERE DEPTNO = p_deptno;
 BEGIN
-   -- INPUT_DEPTNO¿¡ ºÎ¼­ ¹øÈ£ ÀÔ·Â¹Þ°í v_deptno¿¡ ´ëÀÔ
+   -- INPUT_DEPTNOì— ë¶€ì„œ ë²ˆí˜¸ ìž…ë ¥ë°›ê³  v_deptnoì— ëŒ€ìž…
    v_deptno := &INPUT_DEPTNO;
-   -- Ä¿¼­ FOR LOOP ½ÃÀÛ. c1 Ä¿¼­¿¡ v_deptno¸¦ ´ëÀÔ
+   -- ì»¤ì„œ FOR LOOP ì‹œìž‘. c1 ì»¤ì„œì— v_deptnoë¥¼ ëŒ€ìž…
    FOR c1_rec IN c1(v_deptno) LOOP
       DBMS_OUTPUT.PUT_LINE('DEPTNO : ' || c1_rec.DEPTNO
                       || ', DNAME : ' || c1_rec.DNAME

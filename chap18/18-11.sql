@@ -5,14 +5,14 @@ BEGIN
      FROM DEPT
     WHERE DEPTNO = 10;
 
-   DBMS_OUTPUT.PUT_LINE('¿¹¿Ü°¡ ¹ß»ýÇÏ¸é ´ÙÀ½ ¹®ÀåÀº ½ÇÇàµÇÁö ¾Ê½À´Ï´Ù');
+   DBMS_OUTPUT.PUT_LINE('ì˜ˆì™¸ê°€ ë°œìƒí•˜ë©´ ë‹¤ìŒ ë¬¸ìž¥ì€ ì‹¤í–‰ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤');
 
 EXCEPTION
    WHEN TOO_MANY_ROWS THEN
-      DBMS_OUTPUT.PUT_LINE('¿¹¿Ü Ã³¸® : ¿ä±¸º¸´Ù ¸¹Àº Çà ÃßÃâ ¿À·ù ¹ß»ý');
+      DBMS_OUTPUT.PUT_LINE('ì˜ˆì™¸ ì²˜ë¦¬ : ìš”êµ¬ë³´ë‹¤ ë§Žì€ í–‰ ì¶”ì¶œ ì˜¤ë¥˜ ë°œìƒ');
    WHEN VALUE_ERROR THEN
-      DBMS_OUTPUT.PUT_LINE('¿¹¿Ü Ã³¸® : ¼öÄ¡ ¶Ç´Â °ª ¿À·ù ¹ß»ý');
+      DBMS_OUTPUT.PUT_LINE('ì˜ˆì™¸ ì²˜ë¦¬ : ìˆ˜ì¹˜ ë˜ëŠ” ê°’ ì˜¤ë¥˜ ë°œìƒ');
    WHEN OTHERS THEN
-      DBMS_OUTPUT.PUT_LINE('¿¹¿Ü Ã³¸® : »çÀü Á¤ÀÇ ¿Ü ¿À·ù ¹ß»ý');
+      DBMS_OUTPUT.PUT_LINE('ì˜ˆì™¸ ì²˜ë¦¬ : ì‚¬ì „ ì •ì˜ ì™¸ ì˜¤ë¥˜ ë°œìƒ');
 END;
 /
